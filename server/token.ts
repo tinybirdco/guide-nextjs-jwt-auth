@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 const TINYBIRD_SIGNING_TOKEN = process.env.TINYBIRD_SIGNING_TOKEN ?? "";
 const WORKSPACE_ID = process.env.TINYBIRD_WORKSPACE ?? ""; // Get this ID by running `tb workspace current`
-const PIPE_ID = "t_a6505e1262b047be9961ea388ac2cd9a"; // The name of the pipe you want to consume
+const PIPE_ID = "top_airlines"; // The name of the pipe you want to consume
 
 // Server function that generates a JWT
 // All the Tinybird related data won't be visible in the browser
