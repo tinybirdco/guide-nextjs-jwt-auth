@@ -2,6 +2,7 @@
 /* eslint-disable max-len */
 const colors = require('tailwindcss/colors');
 module.exports = {
+  darkMode: 'class',
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -43,46 +44,12 @@ module.exports = {
             inverted: colors.white,
           },
         },
-        // dark mode
-        "dark-tremor": {
-          brand: {
-            faint: "#0B1229",
-            muted: colors.blue[950],
-            subtle: colors.blue[800],
-            DEFAULT: colors.blue[500],
-            emphasis: colors.blue[400],
-            inverted: colors.gray[950],
-          },
-          background: {
-            muted: "#131A2B",
-            subtle: colors.gray[800],
-            DEFAULT: colors.gray[900],
-            emphasis: colors.gray[300],
-          },
-          border: {
-            DEFAULT: colors.gray[800],
-          },
-          ring: {
-            DEFAULT: colors.gray[800],
-          },
-          content: {
-            subtle: colors.gray[600],
-            DEFAULT: colors.gray[600],
-            emphasis: colors.gray[200],
-            strong: colors.gray[50],
-            inverted: colors.black,
-          },
-        },
       },
       boxShadow: {
         // light
         "tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         "tremor-card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
         "tremor-dropdown": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-        // dark
-        "dark-tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-        "dark-tremor-card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-        "dark-tremor-dropdown": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
       },
       borderRadius: {
         "tremor-small": "0.375rem",
