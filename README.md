@@ -35,7 +35,7 @@ You need to copy your Tinybird host and token to the `.env.local` file in your d
 ```bash
 TINYBIRD_SIGNING_TOKEN="YOUR SIGNING TOKEN" # Use your Admin Token as the signing token
 TINYBIRD_WORKSPACE="YOUR WORKSPACE ID" # The UUID of your Workspace
-TINYBIRD_HOST="YOUR API HOST. E.G. https://api.tinybird.co" # Your regional API host
+NEXT_PUBLIC_TINYBIRD_HOST="YOUR API HOST. E.G. https://api.tinybird.co" # Your regional API host
 ```
 
 ### Run the demo app

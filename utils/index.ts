@@ -1,4 +1,4 @@
-const TINYBIRD_HOST = process.env.TINYBIRD_HOST ?? "https://api.tinybird.co";
+const TINYBIRD_HOST = process.env.NEXT_PUBLIC_TINYBIRD_HOST ?? "https://api.tinybird.co";
 
 export function getEndpointUrl() {
 
