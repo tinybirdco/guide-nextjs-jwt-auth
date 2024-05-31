@@ -5,7 +5,7 @@ This repo contains a minimal example demonstrating:
 1. Generating self-signed JWTs for Tinybird
 2. Consuming Tinybird API Endpoints in a Next.js frontend app using a self-signed JWT
 
-You can read more about JWTs in Tinybird in the [documentation](https://www.tinybird.co/docs/concepts/auth-tokens#json-web-tokens-jwts), and there is a full [end-to-end guide](TODO) covering this example.
+You can read more about JWTs in Tinybird in the [documentation](https://www.tinybird.co/docs/concepts/auth-tokens#json-web-tokens-jwts), and there is a full [end-to-end guide](https://www.tinybird.co/docs/guides/integrate/consume-apis-nextjs) covering this example.
 
 ## Run the example locally
 
