@@ -12,7 +12,7 @@ export default function Dashboard() {
   const fetcher = useFetcher(); // This fetcher handles the token revalidation
 
   // Initializes variables for storing data
-  let ranking_of_top_organizations_creating_signatures, latency, errorMessage;
+  let top_airline, latency, errorMessage;
 
   // Using SWR hook to handle state and refresh result every five seconds
   const { data } = useSWR(endpointUrl, fetcher, {
@@ -27,19 +27,19 @@ export default function Dashboard() {
     return;
   }
 
-  ranking_of_top_organizations_creating_signatures = data.data; // Setting the state with the fetched data
+  top_airline = data.data; // Setting the state with the fetched data
   latency = data.statistics?.elapsed; // Setting the state with the query latency from Tinybird
 
   return (
     <Card>
-      <Title>Top Organizations Creating Signatures</Title>
+      <Title>Top airlines by bookings</Title>
       <Subtitle>Ranked from highest to lowest</Subtitle>
-      {ranking_of_top_organizations_creating_signatures && (
+      {top_airline && (
         <BarChart
           className="mt-6"
-          data={ranking_of_top_organizations_creating_signatures}
-          index="organization"
-          categories={["org_total"]}
+          data={top_airline}
+          index="airline"
+          categories={["bookings"]}
           colors={["blue", "red"]}
           yAxisWidth={48}
           showXAxis={true}

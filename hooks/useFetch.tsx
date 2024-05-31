@@ -18,14 +18,14 @@ export function useFetcher() {
     if (!currentToken) {
       currentToken = await refreshToken();
     }
-    const response = await fetch(url + "&token=" + currentToken);
+    const response = await fetch(url + "?token=" + currentToken);
 
     if (response.status === 200) {
       return response.json();
     }
     if (response.status === 403) {
       const newToken = await refreshToken();
-      return fetch(url + "&token=" + newToken).then((res) => res.json());
+      return fetch(url + "?token=" + newToken).then((res) => res.json());
     }
   };
 }
