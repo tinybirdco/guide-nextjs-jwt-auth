@@ -1,16 +1,23 @@
-# Demo JWT
+# Consume Tinybird API Endpoints in Next.js with JWTs
+
+This repo contains a minimal example demonstrating:
+
+1. Generating self-signed JWTs for Tinybird
+2. Consuming Tinybird API Endpoints in a Next.js frontend app using a self-signed JWT
+
+You can read more about JWTs in Tinybird in the [documentation](https://www.tinybird.co/docs/concepts/auth-tokens#json-web-tokens-jwts), and there is a full [end-to-end guide](TODO) covering this example.
+
+## Run the example locally
 
 ### Prerequisites
 
 - Node.js >= v18
-
-## Instructions
-
-Follow these instructions to deploy the working version of this application.
+- A [free Tinybird account](https://tinybird.co)
+- Deploy the [Tinybird resources](/tinybird) to a Tinybird Workspace
 
 ### Install dependencies
 
-Install app dependencies and datagen dependencies. From the root of the repo:
+Install app dependencies. From the root of the repo:
 
 ```bash
 npm install
@@ -26,17 +33,17 @@ cp .env.example .env.local
 You need to copy your Tinybird host and token to the `.env.local` file in your directory:
 
 ```bash
-TINYBIRD_AUTH_TOKEN="YOUR ADMIN TOKEN"
-TINYBIRD_WORKSPACE="YOUR WORKSPACE ID"
-TINYBIRD_HOST="YOUR API HOST. E.G. https://api.tinybird.co"
+TINYBIRD_SIGNING_TOKEN="YOUR SIGNING TOKEN" # Use your Admin Token as the signing token
+TINYBIRD_WORKSPACE="YOUR WORKSPACE ID" # The UUID of your Workspace
+TINYBIRD_HOST="YOUR API HOST. E.G. https://api.tinybird.co" # Your regional API host
 ```
 
-## Run the dashboard locally
+### Run the demo app
 
-To view the dashboard on your machine, run it locally:
+Run it locally:
 
 ```bash
 npm run dev
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) with your browser.
