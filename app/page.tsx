@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart, Card, Subtitle, Text, Title } from "@tremor/react";
+import { TopAirlines } from "./components/TopAirlines";
 import useSWR from "swr";
 import { getEndpointUrl } from "@/utils";
 import { useFetcher } from "@/hooks/useFetch";
@@ -31,29 +31,6 @@ export default function Dashboard() {
   latency = data.statistics?.elapsed; // Setting the state with the query latency from Tinybird
 
   return (
-    <Card>
-      <Title>Top airlines by bookings</Title>
-      <Subtitle>Ranked from highest to lowest</Subtitle>
-      {top_airline && (
-        <BarChart
-          className="mt-6"
-          data={top_airline}
-          index="airline"
-          categories={["bookings"]}
-          colors={["blue", "red"]}
-          yAxisWidth={48}
-          showXAxis={true}
-        />
-      )}
-      {latency && <Text>Latency: {latency * 1000} ms</Text>}
-      {errorMessage && (
-        <div className="mt-4 text-red-600">
-          <p>
-            Oops, something happens: <strong>{errorMessage}</strong>
-          </p>
-          <p className="text-sm">Check your console for more information</p>
-        </div>
-      )}
-    </Card>
+    <TopAirlines />
   );
 }
