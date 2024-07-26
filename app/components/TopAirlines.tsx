@@ -4,15 +4,17 @@ import { BarChart, ChartProvider } from '@tinybirdco/charts'
 import { useFetcher } from "@/hooks/useFetch";
 
 export function TopAirlines() {
-
   const fetcher = useFetcher(); // This fetcher handles the token revalidation
-
+  let token;
+  if (typeof window !== "undefined") {
+    token = window.localStorage.getItem("tinybirdJWT") || ''
+  }
   return (
     <ChartProvider
       queryConfig={{
         endpoint: 'https://api.tinybird.co/v0/pipes/top_airlines.json',
-        token: localStorage.getItem("tinybirdJWT") || '',
-        fetcher: fetcher
+        token,
+        fetcher,
       }}
     >
       <BarChart
