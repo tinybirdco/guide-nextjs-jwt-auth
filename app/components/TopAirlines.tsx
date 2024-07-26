@@ -2,13 +2,14 @@
 
 import { BarChart, ChartProvider } from '@tinybirdco/charts'
 import { useFetcher } from "@/hooks/useFetch";
+import { useEffect, useState } from 'react';
 
 export function TopAirlines() {
   const fetcher = useFetcher(); // This fetcher handles the token revalidation
-  let token;
-  if (typeof window !== "undefined") {
-    token = window.localStorage.getItem("tinybirdJWT") || ''
-  }
+  const [token, setToken] = useState('');
+  useEffect(() => {
+    setToken(window.localStorage.getItem("tinybirdJWT") || '')
+  }, [])
   return (
     <ChartProvider
       queryConfig={{
