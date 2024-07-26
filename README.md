@@ -20,7 +20,7 @@ You can read more about JWTs in Tinybird in the [documentation](https://www.tiny
 Install app dependencies. From the root of the repo:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Add your Tinybird parameters
@@ -43,7 +43,7 @@ NEXT_PUBLIC_TINYBIRD_HOST="YOUR API HOST. E.G. https://api.tinybird.co" # Your r
 Run it locally:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) with your browser.
